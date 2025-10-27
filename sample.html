@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ladder Design for Steps</title>
+        <link rel="stylesheet" href="sample-styles.css">
+
+        <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .ladder-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 50px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .step {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50%;
+            position: absolute;
+            left: -70px;
+        }
+        .step-content {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            margin-left: 50px;
+            position: relative;
+        }
+        .step-content:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%) rotate(45deg);
+            border-radius: 2px;
+        }
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .step-description {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        .step:not(:last-child):after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: calc(100% + 20px);
+            background-color: #007bff;
+            left: -44px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .ladder-container .step:last-child:after {
+            display: none;
+        }
+    </style> -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="row how-we-work-timeline--container">
+                <div class="col-sm-12">
+                    <div class="timeline">
+                        <div class="timeline-label">For Attorneys
+                        </div>
+                        <ul>
+                            <li class="timeline-step crucial-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <h5 class="text-blue">1. Intake
+                                    </h5>
+                                </div>
+                            </li>
+                            <li class="timeline-step regular-step">
+                                <div class="step-container wow fadeInRight"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                                    <img width="100"
+                                        class="timeline-image-circle"
+                                        src="https://randomuser.me/api/portraits/women/48.jpg">
+                                    <p class="small-margin-top">Lorem ipsum
+                                        dolor sit amet consectetur adipisicing
+                                        elit. Natus quaerat cum ut odit sequi
+                                        esse rerum dolorem nesciunt sapiente?
+                                        Pariatur cumque iusto excepturi
+                                        provident repudiandae nisi sed earum
+                                        illum alias.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-step crucial-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <h5 class="text-blue">2. Search
+                                    </h5>
+                                </div>
+                            </li>
+                            <li class="timeline-step regular-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <img width="100"
+                                        class="timeline-image-circle"
+                                        src="https://picsum.photos/200/?random
+">
+                                    <p class="small-margin-top">Lorem ipsum
+                                        dolor sit amet consectetur adipisicing
+                                        elit. Natus quaerat cum ut odit sequi
+                                        esse rerum dolorem nesciunt sapiente?
+                                        Pariatur cumque iusto excepturi
+                                        provident repudiandae nisi sed earum
+                                        illum alias.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-step crucial-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <h5 class="text-blue">3. Share
+                                    </h5>
+                                </div>
+                            </li>
+                            <li class="timeline-step regular-step">
+                                <div class="step-container wow fadeInRight"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                                    <img width="100"
+                                        class="timeline-image-circle"
+                                        src="https://picsum.photos/200/?image=22">
+                                    <p class="small-margin-top">Lorem ipsum
+                                        dolor sit amet consectetur adipisicing
+                                        elit. Natus quaerat cum ut odit sequi
+                                        esse rerum dolorem nesciunt sapiente?
+                                        Pariatur cumque iusto excepturi
+                                        provident repudiandae nisi sed earum
+                                        illum alias.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="timeline-step crucial-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <h5 class="text-blue">4. Retain </h5>
+                                </div>
+                            </li>
+                            <li class="timeline-step regular-step">
+                                <div class="step-container wow fadeInLeft"
+                                    data-wow-duration="1s"
+                                    style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                    <img width="100"
+                                        class="timeline-image-circle"
+                                        src="https://picsum.photos/200/?image=39">
+                                    <p class="small-margin-top">Lorem ipsum
+                                        dolor sit amet consectetur adipisicing
+                                        elit. Natus quaerat cum ut odit sequi
+                                        esse rerum dolorem nesciunt sapiente?
+                                        Pariatur cumque iusto excepturi
+                                        provident repudiandae nisi sed earum
+                                        illum alias.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="process-transition wow fadeIn"
+                            style="visibility: visible; animation-name: fadeIn;">
+                            <h4 class="text-blue">You work with the expert
+                                directly.
+                            </h4>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-label">For Experts
+                            </div>
+                            <ul>
+                                <li class="timeline-step regular-step">
+                                    <div class="step-container wow fadeInLeft"
+                                        data-wow-duration="1s"
+                                        style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                        <img width="100"
+                                            class="timeline-image-circle"
+                                            src="https://picsum.photos/200/?image=23">
+                                        <p class="small-margin-top">Lorem ipsum
+                                            dolor sit amet consectetur
+                                            adipisicing elit. Natus quaerat cum
+                                            ut odit sequi esse rerum dolorem
+                                            nesciunt sapiente? Pariatur cumque
+                                            iusto excepturi provident
+                                            repudiandae nisi sed earum illum
+                                            alias.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-step regular-step">
+                                    <div class="step-container wow fadeInRight"
+                                        data-wow-duration="1s"
+                                        style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                                        <img width="100"
+                                            class="timeline-image-circle"
+                                            src="https://picsum.photos/200/?image=32">
+                                        <p class="small-margin-top">Lorem ipsum
+                                            dolor sit amet consectetur
+                                            adipisicing elit. Natus quaerat cum
+                                            ut odit sequi esse rerum dolorem
+                                            nesciunt sapiente? Pariatur cumque
+                                            iusto excepturi provident
+                                            repudiandae nisi sed earum illum
+                                            alias.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-step regular-step">
+                                    <div class="step-container wow fadeInLeft"
+                                        data-wow-duration="1s"
+                                        style="visibility: visible; animation-duration: 1s; animation-name: fadeInLeft;">
+                                        <img width="100"
+                                            class="timeline-image-circle"
+                                            src="https://picsum.photos/200/?image=34">
+                                        <p class="small-margin-top">Lorem ipsum
+                                            dolor sit amet consectetur
+                                            adipisicing elit. Natus quaerat cum
+                                            ut odit sequi esse rerum dolorem
+                                            nesciunt sapiente? Pariatur cumque
+                                            iusto excepturi provident
+                                            repudiandae nisi sed earum illum
+                                            alias.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-step crucial-step">
+                                    <div class="step-container wow fadeInRight"
+                                        data-wow-duration="1s"
+                                        style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                                        <h5 class="text-blue">You work with the
+                                            attorney directly.
+                                        </h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="ladder-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Build Your Perfect Pipeline</div>
+                    <div class="step-description">
+                        Create Laser-Focused Lead Lists That Convert. Tap into a
+                        vast universe of qualified prospects with Sales
+                        Connectify's comprehensive database:
+                        <ul>
+                            <li>Over 500 million professional contacts</li>
+                            <li>More than 100 million companies</li>
+                            <li>Coverage across 300+ industries globally</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Unlock Deep Business
+                        Intelligence</div>
+                    <div class="step-description">
+                        Power Your Outreach with Rich, Real-Time Data. Transform
+                        your prospecting with over 75 data enrichment points:
+                        <ul>
+                            <li>Decision makers' verified email addresses</li>
+                            <li>Complete technology stack insights</li>
+                            <li>Company firmographics and growth signals</li>
+                            <li>Key business indicators and trends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Harness AI-Powered
+                        Intelligence</div>
+                    <div class="step-description">
+                        From Research to Results in Minutes, Not Hours. Let our
+                        advanced AI agent transform your prospecting workflow:
+                        <ul>
+                            <li>Companies' latest developments and market
+                                positions</li>
+                            <li>Decision makers' professional backgrounds and
+                                achievements</li>
+                            <li>Industry trends and competitive landscapes</li>
+                            <li>Recent news, announcements, and growth
+                                signals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Create Messages That Matter</div>
+                    <div class="step-description">
+                        Scale Personalization Without Sacrificing Quality.
+                        Transform your outreach by crafting uniquely
+                        personalized emails for every prospect.
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>

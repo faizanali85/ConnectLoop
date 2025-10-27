@@ -1,0 +1,148 @@
+
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  overflow-x: hidden;
+} */
+
+
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+.task {
+  position: absolute;
+  display: flex;
+  right: 5%;
+  text-align: left;
+  width: 200px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Start with invisible task */
+  transition: opacity 0.10s ease-in-out; /* Add transition for opacity */
+}
+
+.task::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: -350px;
+    width: 150% !important;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      #6C5FFC 0%,
+      #6C5FFC 50%,
+      transparent 50%,
+      transparent 100%
+    );
+    background-size: 10px 2px;
+    transition: width 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .task.active::before {
+    width: 100px;
+  }
+
+  @media (max-width: 768px) {
+  .task::before {
+    left: -120px;
+    width: 60% !important;
+  }
+  }
+
+  @media (max-width: 525px) {
+    .task::before {
+      left: -100px;
+      width: 50% !important;
+    }
+    .agent {
+      left: 2% !important;
+    }
+    }
+
+.task h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.agent {
+position: absolute;
+width: 100px;
+height: 100px;
+background: url("/assets/images/ai-agents/agent-dbl1.png") no-repeat center center / contain;
+border-radius: 50%;
+left: 10%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+.line {
+  position: absolute;
+  width: 4px;
+  background: #6C5FFC;
+  height: 100%;
+  z-index: -1;
+  top: 40px !important;
+  left: 0;
+}
+
+.line-active {
+  background: #6C5FFC;
+  height: 0;
+  transition: height 1s ease-in-out;
+  top: 40px !important;
+}
+
+.task:nth-child(1) {
+  top: 10%;
+}
+
+.task:nth-child(3) {
+  top: 8%;
+}
+
+.task:nth-child(5) {
+  top: 33.6%;
+}
+
+.task:nth-child(7) {
+  top: 58.2%;
+}
+
+.task:nth-child(9) {
+  top: 83.6%;
+}
+
+.agent:nth-child(2) {
+  top: 10%;
+}
+
+.agent:nth-child(4) {
+  top: 34.5%;
+}
+
+.agent:nth-child(6) {
+  top: 59%;
+}
+
+.agent:nth-child(8) {
+  top: 83.5%;
+}

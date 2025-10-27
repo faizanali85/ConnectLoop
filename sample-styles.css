@@ -1,0 +1,192 @@
+body {
+    margin-top: 10%;
+    font-family: proxima nova, 'proxima-nova', sans-serif;
+}
+.crucial-step {
+    text-align: right;
+}
+.how-we-work-timeline--container h5 {
+   /* font: 500 22px/1.45 'proxima nova', sans-serif;
+    */
+    font-size: 2em;
+    line-height: 1.25;
+    margin: 0;
+    color: #1d2c4c;
+}
+.text-blue {
+    color: #2a5781;
+}
+/* END DEMO CSSS */
+.timeline-image-circle {
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+.how-we-work-timeline--container ul {
+    padding: 0;
+}
+.how-we-work-timeline--container section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.how-we-work-timeline--container .how-it-works-intro {
+    background: linear-gradient(#f5f8fb, #fff);
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+.how-we-work-timeline--container .main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    max-width: 1600px;
+}
+.how-we-work-timeline--container .intro {
+    background: linear-gradient(#f5f8fb, #fff);
+}
+.how-we-work-timeline--container .timeline {
+    position: relative;
+    border-top: 1px solid #f0f0f0;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline {
+        margin: 0 auto;
+        max-width: 340px;
+   }
+}
+.how-we-work-timeline--container .timeline .timeline-label {
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 32px;
+    opacity: 0.5;
+}
+.how-we-work-timeline--container .timeline-step {
+    position: relative;
+    width: 2px;
+    margin: 0 auto;
+    list-style-type: none;
+    background: #f0f0f0;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline-step {
+        margin: 0;
+   }
+}
+.how-we-work-timeline--container .timeline-step:nth-child(2n) .step-container {
+    left: 100px;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline-step:nth-child(2n) .step-container {
+        left: 40px;
+   }
+}
+.how-we-work-timeline--container .timeline-step:nth-child(2n) .step-container:before {
+    left: -80px;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline-step:nth-child(2n) .step-container:before {
+        left: -30px;
+   }
+}
+.how-we-work-timeline--container .timeline-step:nth-child(odd) .step-container {
+    left: -400px;
+    text-align: right;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline-step:nth-child(odd) .step-container {
+        left: 40px;
+        text-align: left;
+   }
+}
+.how-we-work-timeline--container .timeline-step:nth-child(odd) .step-container:before {
+    right: -80px;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .timeline-step:nth-child(odd) .step-container:before {
+        left: -30px;
+        right: auto;
+   }
+}
+.how-we-work-timeline--container .timeline-step:hover:after {
+    border: 10px solid cf;
+    background: #1c85e8;
+}
+.how-we-work-timeline--container .timeline-step:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: inherit;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: border-box;
+    box-sizing: content-box;
+}
+.how-we-work-timeline--container .process-transition {
+    max-width: 400px;
+    text-align: center;
+    margin: 64px auto;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .process-transition {
+        text-align: left;
+        margin: 32px 0;
+   }
+}
+.how-we-work-timeline--container .crucial-step:after {
+    top: 5px;
+    border: 10px solid #fff;
+    background: #1c85e8;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .crucial-step:after {
+        top: 25px;
+   }
+}
+.how-we-work-timeline--container .crucial-step .step-container:before {
+    top: 18px;
+    background: #1c85e8;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .crucial-step .step-container:before {
+        top: 38px;
+   }
+}
+.how-we-work-timeline--container .regular-step:after {
+    top: 120px;
+    border: 10px solid #fff;
+    background: #506d7e;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .regular-step:after {
+        top: 140px;
+   }
+}
+.how-we-work-timeline--container .step-container {
+    position: relative;
+    bottom: 0;
+    width: 290px;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .step-container {
+        padding: 24px 0;
+   }
+}
+.how-we-work-timeline--container .step-container:before {
+    content: "";
+    position: absolute;
+    top: 133px;
+    width: 60px;
+    height: 2px;
+    background: #f0f0f0;
+}
+@media (max-width: 991px) {
+    .how-we-work-timeline--container .step-container:before {
+        top: 153px;
+        width: 20px;
+   }
+}
